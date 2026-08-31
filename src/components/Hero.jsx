@@ -25,7 +25,19 @@ export default function Hero({ data }) {
             href={data.instagramUrl}
             target="_blank"
             rel="noreferrer"
-            className="group relative px-8 py-4 bg-purple-700 hover:bg-purple-600 text-white rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(140, 11, 245, 0.5)] border border-purple-500 flex items-center gap-2"
+            className="
+              group relative
+              px-8 py-4
+              bg-purple-700 hover:bg-purple-600
+              text-white
+              rounded-full
+              font-bold text-lg
+              transition-[background-color,box-shadow]
+              duration-300
+              hover:shadow-[0_10px_40px_-10px_rgba(140,11,245,0.5)]
+              border border-purple-500
+              flex items-center gap-2
+            "
           >
             {data.ctaText}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
