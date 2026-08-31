@@ -3,7 +3,7 @@ export default function Header({ instagramUrl }) {
     <header className="sticky top-0 z-50 glass-panel border-b border-purple-900/30 shadow-lg">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="font-bold text-2xl tracking-tight text-white flex items-center gap-2 glow-text">
-          <img className="logo" src="/public/favicon.png" alt="Sihirbazın Çırağı 3D Logo" />
+          <img className="logo" src="/favicon.png" alt="Sihirbazın Çırağı 3D Logo" />
           Sihirbazın Çırağı
         </div>
         <a 
