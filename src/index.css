@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+/* 1. Sihirli Arka Plan Deseni (3D Grid / Yıldız Tozu Hissi) */
+.magic-bg {
+  background-color: #0f172a; /* Derin ve ferah bir gece mavisi (slate-900) */
+  background-image: radial-gradient(rgba(139, 92, 246, 0.2) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* 2. Cam Efektli Kartlar (Glassmorphism) - Boşluğu şık bir şekilde doldurur */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.6); /* Yarı şeffaf slate-800 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.2); /* Hafif mor kenarlık */
+}
+
+/* 3. Sihirli Parlama Efekti */
+.glow-text {
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.6);
+}
+
+/* 4. Süzülme (Hover/Float) Animasyonu */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.get-info {
+  transition: margin-left 0.2s ease;
+}
+
+.product-card:hover .get-info {
+  margin-left: 5px;
+}
+
+/* Hero 3D Süzülme Animasyonu */
+@keyframes float-3d {
+  0% { transform: perspective(85em) rotateX(18deg) translateY(0px); }
+  50% { transform: perspective(85em) rotateX(18deg) translateY(-20px); }
+  100% { transform: perspective(85em) rotateX(18deg) translateY(0px); }
+}
+
+.hero-3d-card {
+  animation: float-3d 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  
+  /* Arka plan cam efekti */
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* Senin verdiğin değerler (koyu temaya uyarlanmış şeffaflıkla) */
+  box-shadow:
+    rgba(22, 31, 39, 0.6) 0px 60px 123px -25px,
+    rgba(139, 92, 246, 0.15) 0px 35px 75px -35px; /* Sihirli mor yansıma */
+  
+  border-radius: 24px; /* Tasarımın geri kalanıyla uyumlu yuvarlaklık */
+  border: 1px solid rgba(213, 220, 226, 0.15); 
+  border-bottom-color: rgba(184, 194, 204, 0.3);
+}
